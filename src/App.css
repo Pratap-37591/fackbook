@@ -1,38 +1,202 @@
-.App {
+body {
+  background-color: black;
+}
+
+:root {
+  --mainColor: yellow;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todolist {
+  width: 70%;
+  background-color: var(--mainColor);
+  box-shadow: 0px 0px 10px #fff;
+  margin-top: 5em;
+  border-radius: 0.5em;
+}
+h1 {
+  font-size: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  font-size: 1.3rem;
+  padding: 0.6em;
+  width: 70%;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  font-size: 1.1rem;
+  padding: 0.9em 0.9em;
+  border: none;
+  outline: none;
+  margin-left: 1em;
+  background-color: #000;
+  color: var(--mainColor);
+}
+
+ol {
+  text-align: left;
+  width: 70%;
+  margin: 1em auto;
+}
+
+/* ol li {
+  background-color: #fff;
+  font-size: 1.5rem;
+
+  margin-top: 0.5em;
+} */
+
+.addedItem {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li,
+.fa-trash {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+.fa-trash:hover {
+  color: red;
+}
+
+.main_div {
+  background-color: skyblue;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+.center_div {
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+  background-color: #b4f4b2;
+  width: 25%;
+  height: 80vh;
+  border-radius: 15px;
+}
+h1 {
   color: white;
+  background: transparent;
+  background-color: #8566aa;
+  padding: 6px 0 2px 0;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  text-align: left;
+  font-size: 20px;
+  height: 30px;
+  top: 10px;
+  border: none;
+  font-weight: 500;
+  background: transparent;
+  outline: none;
+  width: 60%;
+  color: #000;
+  border-bottom: 2px solid #8566aa;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  min-height: 20px;
+  height: auto;
+  width: 60px;
+  border-radius: 90%;
+
+  border-color: transparent;
+  background-color: #8566aa;
+  margin-left: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  color: wheat;
+  border: none;
+  /* font-size: 20px; */
+  outline: none;
+}
+
+.fa {
+  font-size: 30px;
+}
+
+button:hover {
+  background-color: rgb(53, 150, 33);
+}
+
+ol {
+  margin-top: 30px;
+}
+
+ol li {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  color: #8566aa;
+  text-transform: capitalize;
+}
+
+.todoStyle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 27px;
+}
+
+.todoStyle li {
+  font-size: 25px;
+}
+
+.todoStyle .fa-sharp {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8566aa;
+  border-radius: 50%;
+  margin: 0 15px 0 35px;
+  color: aliceblue;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.todoStyle .fa-sharp:hover {
+  background-color: crimson;
+}
+
+@media (max-width: 768px) {
+  .center_div {
+    width: 55%;
   }
-  to {
-    transform: rotate(360deg);
+  .todoStyle .fa-sharp {
+    margin: 0 15px 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    margin-left: 5px;
+    min-height: 40px;
+    width: 40px;
+    color: #fff;
+    font-size: 30px;
   }
 }
+
